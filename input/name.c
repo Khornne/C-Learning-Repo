@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    char name[16];
+  char name[16];
 
-    printf("Hello! what is your name?\n");
-    scanf("%s", name);
+  printf("Hello! what is your name?\n");
+  scanf("%s", name);
 
-    printf("Hello %s\n", name);
+  printf("Hello %s\n", name);
 
-    return 0;
+  return 0;
 }
