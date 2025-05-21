@@ -65,3 +65,31 @@ void registerUser() {
 
   printf("Registration complete! Welcome to Wizlog");
 }
+
+void login() {
+  struct User user;
+  char inputUsername[MAX_LENGTH], inputPassword[MAX_LENGTH];
+  FILE *file;
+  int isAuthenticated = 0;
+
+  file = fopen("user.txt", "r");
+  if (file == NULL) {
+    printf("Error! Please register first!");
+    return;
+  }
+
+  while (fscanf(file, "%s %s\n", user.username, user.password) != EOF) {
+    if (strcmp(inputUsername, user.username) == 0 &&
+        strcmp(inputPassword, user.password) == 0) {
+      isAuthenticated = 1;
+      break;
+    }
+  }
+  fclose(file);
+
+  if (isAuthenticated) {
+    printf("Welcome to Wizlog!");
+  } else {
+    printf("Error! User does not exsit!");
+  }
+}
