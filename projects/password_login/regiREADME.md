@@ -7,9 +7,8 @@ If you choose sign up you then create a username and strong password which will 
 the data into a text file to where it will remember your registration for the login.
 
 Features:
-- [ ] Create login page
+- [x] Create login page
 - [ ] Minimum of 8 characters in length
 - [ ] Must have at least one special character and capital letter
-- [ ] If conditions are not met, then give them an error
 - [ ] Once error condition is met tell them to try again
-- [ ] When conditions are all met save data onto text file
+- [x] When conditions are all met save data onto text file
