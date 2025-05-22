@@ -10,5 +10,5 @@ Features:
 - [x] Create login page
 - [ ] Minimum of 8 characters in length
 - [ ] Must have at least one special character and capital letter
-- [ ] Once error condition is met tell them to try again
+- [x] Once error condition is met tell them to try again
 - [x] When conditions are all met save data onto text file
