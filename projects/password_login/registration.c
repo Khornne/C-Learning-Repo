@@ -78,6 +78,12 @@ void login() {
     return;
   }
 
+  printf("===Please Login===\n");
+  printf("Enter Username: ");
+  scanf("%s", inputUsername);
+  printf("Enter Password: ");
+  scanf("%s", inputPassword);
+
   while (fscanf(file, "%s %s\n", user.username, user.password) != EOF) {
     if (strcmp(inputUsername, user.username) == 0 &&
         strcmp(inputPassword, user.password) == 0) {
