@@ -111,10 +111,11 @@ void userView() {
   }
 
   printf("===All Registered Users===\n");
-  printf("%-20s %-20s \n", "Username", "Password");
+  printf("%-20s %-20s\n", "Username", "Password");
   printf("==========================================\n");
 
   while (fscanf(file, "%s %s\n", user.username, user.password) != EOF) {
-    printf("%-20 %-20\n", user.username, user.password);
+    printf("%s %s\n", user.username, user.password);
   }
+  fclose(file);
 }
