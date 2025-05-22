@@ -31,9 +31,9 @@ int main() {
     case 2:
       login();
       break;
-    // case 3:
-    //   viewUsers();
-    //   break;
+    case 3:
+      userView();
+      break;
     case 4:
       printf("Exitig WizLog....\n");
       exit(0);
@@ -97,5 +97,24 @@ void login() {
     printf("Welcome to Wizlog!");
   } else {
     printf("Error! User does not exsit!");
+  }
+}
+
+void userView() {
+  struct User user;
+  FILE *file;
+
+  file = fopen("user.txt", "r");
+  if (file == NULL) {
+    printf("Error! No registered users found. Please register first!");
+    return;
+  }
+
+  printf("===All Registered Users===\n");
+  printf("%-20s %-20s \n", "Username", "Password");
+  printf("==========================================\n");
+
+  while (fscanf(file, "%s %s\n", user.username, user.password) != EOF) {
+    printf("%-20 %-20\n", user.username, user.password);
   }
 }
