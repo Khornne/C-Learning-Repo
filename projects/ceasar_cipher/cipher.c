@@ -1,7 +1,7 @@
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 
-int main () {
+int main() {
   char cipher[500], ch;
 
   int key;
@@ -12,30 +12,26 @@ int main () {
   printf("Enter key: ");
   scanf("%d", &key);
 
-
   for (int i = 0; cipher[i] != '\0'; ++i) {
+    ch = cipher[i];
 
-  ch = cipher[i];
-
-  if (isalnum(ch)) {
-
-    if (islower(ch)){
-      ch = (ch - 'a' + key) % 26 + 'a';
+    if (isalnum(ch)) {
+      if (islower(ch)) {
+        ch = (ch - 'a' - key + 26) % 26 + 'a';
+      }
+      if (isupper(ch)) {
+        ch = (ch - 'A' - key + 26) % 26 + 'A';
+      }
+      if (isdigit(ch)) {
+        ch = (ch - '0' - key + 10) % 10 + '0';
+      }
+    } else {
+      printf("Invalid Message");
     }
-    if (isupper(ch)){
-      ch = (ch - 'A' + key) % 26 + 'A';
-    }
-    if (isdigit(ch)) {
-      ch = (ch - '0' + key) % 26 + '0';
-    }
 
-  else {
-    printf("Invalid Message\n");
-}
-      
-    printf("Encrypted message: %s\n", cipher);
-    return 0;
-  }  
-
+    cipher[i] = ch;
   }
+  printf("Ecryption: %s\n", cipher);
+
+  return 0;
 }
