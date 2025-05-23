@@ -1,6 +1,7 @@
 # Simple Password Login
 
-Description: This program will be a simple registration CLI page.
+Description: 
+This program will be a simple registration CLI page.
 It will greet you then ask you whether you want to login or sign up.
 If you choose login you will have to enter a username and password.
 If you choose sign up you then create a username and strong password which will save 
